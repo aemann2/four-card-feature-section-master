@@ -4,7 +4,7 @@
 
 $dark-heading-font-color: rgb(76, 78, 97);
 $normal-font-color: rgb(163, 165, 174);
-$light-font-color: rgb(250, 250, 250);
+$light-color: rgb(250, 250, 250);
 $red: hsl(0, 78%, 62%);
 $cyan: hsl(180, 62%, 55%);
 $orange: hsl(34, 97%, 64%);
@@ -54,6 +54,7 @@ body {
 .header {
   color: $dark-heading-font-color;
   width: 35rem;
+  margin: auto;
 
   &--thin {
     font-weight: 200;
@@ -67,6 +68,15 @@ body {
     color: $normal-font-color;
     margin-top: 1rem;
   }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 22rem);
+  column-gap: 2rem;
+  row-gap: 2rem;
+  justify-content: center;
+  margin-top: 5rem;
 }
 
 .card {
@@ -83,24 +93,37 @@ body {
   }
 
   &--supervisor {
+    grid-column: 1;
+    grid-row: 2;
     @include topborder($cyan);
     @include icon('../images/icon-supervisor.svg');
   }
 
   &--builder {
-    // border-top: 10px solid $red;
+    grid-column: 2;
+    grid-row: 1;
     @include topborder($red);
     @include icon('../images/icon-team-builder.svg');
   }
 
   &--karma {
+    grid-column: 2;
+    grid-row: 2;
     @include topborder($orange);
     @include icon('../images/icon-karma.svg');
   }
 
   &--calculator {
+    grid-column: 3;
+    grid-row: 2;
     @include topborder($blue);
     @include icon('../images/icon-calculator.svg');
+  }
+
+  &--supervisor,
+  &--calculator {
+    position: relative;
+    bottom: 10rem;
   }
 }
 
