@@ -45,8 +45,6 @@ body {
 
 .header {
   color: #4c4e61;
-  width: 35rem;
-  display: inline-block;
 }
 
 .header--thin {
@@ -59,20 +57,19 @@ body {
 
 .header__sub {
   color: #a3a5ae;
+  width: 35rem;
+  display: inline-block;
   margin-top: 1rem;
 }
 
 .cards {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (22em)[3];
-      grid-template-columns: repeat(3, 22em);
+  -ms-grid-columns: (22rem)[3];
+      grid-template-columns: repeat(3, 22rem);
   -webkit-column-gap: 2rem;
           column-gap: 2rem;
   row-gap: 2rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-top: 5rem;
 }
 
@@ -184,10 +181,10 @@ body {
 @media only screen and (max-width: 620px) {
   .header {
     width: 300px;
+    display: inline-block;
     margin-bottom: 1rem;
   }
   .header__sub {
-    display: inline-block;
     width: 300px;
   }
   .cards {

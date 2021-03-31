@@ -54,8 +54,6 @@ body {
 
 .header {
   color: $dark-heading-font-color;
-  width: 35rem;
-  display: inline-block;
 
   &--thin {
     font-weight: 200;
@@ -67,16 +65,17 @@ body {
 
   &__sub {
     color: $normal-font-color;
+    width: 35rem;
+    display: inline-block;
     margin-top: 1rem;
   }
 }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 22em);
+  grid-template-columns: repeat(3, 22rem);
   column-gap: 2rem;
   row-gap: 2rem;
-  justify-content: center;
   margin-top: 5rem;
 }
 
@@ -181,10 +180,10 @@ body {
 @media only screen and (max-width: 620px) {
   .header {
     width: 300px;
+    display: inline-block;
     margin-bottom: 1rem;
 
     &__sub {
-      display: inline-block;
       width: 300px;
     }
   }
