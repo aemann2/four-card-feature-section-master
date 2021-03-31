@@ -10,11 +10,19 @@ $cyan: hsl(180, 62%, 55%);
 $orange: hsl(34, 97%, 64%);
 $blue: hsl(212, 86%, 64%);
 
+@mixin topborder($color) {
+  border-top: 10px solid $color;
+}
+
+@mixin icon($path) {
+  background: no-repeat url($path) 90% 85%/15%;
+}
+
 // Globals
 
 html {
   box-sizing: border-box;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
 }
 *,
@@ -31,6 +39,69 @@ html {
 body {
   min-height: 100vh;
   font-family: 'Poppins', sans-serif;
+  color: $normal-font-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main {
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.header {
+  color: $dark-heading-font-color;
+  width: 35rem;
+
+  &--thin {
+    font-weight: 200;
+  }
+
+  &--bold {
+    font-weight: 600;
+  }
+
+  &__sub {
+    color: $normal-font-color;
+    margin-top: 1rem;
+  }
+}
+
+.card {
+  border: 1px solid $light-font-color;
+  padding: 2rem;
+  text-align: left;
+  height: 20rem;
+  border-radius: 10px;
+
+  &__header {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: $dark-heading-font-color;
+  }
+
+  &--supervisor {
+    @include topborder($cyan);
+    @include icon('../images/icon-supervisor.svg');
+  }
+
+  &--builder {
+    // border-top: 10px solid $red;
+    @include topborder($red);
+    @include icon('../images/icon-team-builder.svg');
+  }
+
+  &--karma {
+    @include topborder($orange);
+    @include icon('../images/icon-karma.svg');
+  }
+
+  &--calculator {
+    @include topborder($blue);
+    @include icon('../images/icon-calculator.svg');
+  }
 }
 
 .attribution {
