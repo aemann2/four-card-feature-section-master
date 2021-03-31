@@ -1,4 +1,4 @@
-# [Frontend Mentor - Coding bootcamp testimonials slider](https://four-card-frontend.netlify.app/)
+# [Frontend Mentor - Four card feature section](https://four-card-frontend.netlify.app/)
 
 ## Background
 
